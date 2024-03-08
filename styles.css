@@ -1,0 +1,269 @@
+body {
+    color: aliceblue;
+    background-color: black;
+}
+header {
+    background-color: black; /* Header background color */
+    color: #fff; /* Text color */
+    padding: 20px 0; /* Padding at the top and bottom */
+}
+
+.header-container {
+    max-width: 1200px; /* Limit the width of the header content */
+    margin: 0 auto; /* Center the header horizontally */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+}
+
+.header-links {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+}
+
+.header-links li {
+    display: inline; /* Display list items inline */
+    margin-right: 10px; /* Add some space between list items */
+}
+
+.header-links li:last-child {
+    margin-right: 0; /* Remove margin for the last list item */
+}
+
+.header-links a {
+    color: #fff; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.header-links a:hover {
+    color: #ffa500; /* Change link text color on hover */
+}
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 600px) {
+    .header-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-links li {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+.container {
+    text-align: center;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    animation: slideImage 3s ease-in-out;
+   
+}
+.title {
+    margin-top: -50px; /* Adjust this value to move the title section up */
+}
+
+
+
+@keyframes slideImage {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#about {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    color: #2d1e1e;
+}
+
+.about-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-header h2 {
+    color: #2d1e1e;
+    font-size: 28px;
+}
+
+.about-content {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-weight: bold;
+    opacity: 0;
+}
+
+@keyframes slideContent {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.image img,
+.about-content p {
+    max-width: 100%;
+    height: auto;
+    animation: slideImage 3s ease-in-out, slideContent 3s ease-in-out forwards;
+}
+
+.container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+#about {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-between; /* Align items with space between them */
+}
+
+.about-content {
+    width: calc(50% - 10px); /* Adjust width as per your preference */
+    margin-right: 10px;
+    max-height: auto;
+}
+
+.about-image {
+    width: 30%; /* Adjust the width as per your preference */
+    max-width: 200px; /* Limit the maximum width to prevent the image from going out of the box */
+}
+.about-content {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+}
+
+.about-image {
+    width: 30%; /* Adjust the width as per your preference */
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    margin-left: auto; /* Push the image to the right */
+}
+.about-image img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Fill the container width */
+}
+.about-image img {
+    max-width: 400px; /* Set a maximum width of 400 pixels */
+    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Fill the container width */
+}
+/* Default styles */
+.about-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 0 10px; /* Add some padding to the container */
+    }
+
+    .about-content, .about-image {
+        width: 100%; /* Make both sections full width on small screens */
+        margin-right: 0; /* Remove right margin for about-content */
+    }
+
+    .about-image {
+        margin-left: 0; /* Remove left margin for about-image */
+    }
+}
+
+/* Add more media queries as needed for different screen sizes */
+/* Default styles */
+#events {
+    background-color: #151313;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event {
+    margin-bottom: 20px;
+}
+
+.event h3 {
+    color: #dcd2d2;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.event p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 600px) {
+    .event h3 {
+        font-size: 18px; /* Reduce font size for smaller screens */
+    }
+
+    .event p {
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+}
+
+/* Add more media queries as needed for different screen sizes */
+
+
+
+
+
+/* Default styles */
+.event img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image doesn't cause horizontal scrolling */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 600px) {
+    .event img {
+        max-width: 80%; /* Reduce the maximum width of the image for smaller screens */
+    }
+}
+footer {
+    background-color: #eaeae2; /* Background color for the footer */
+    color: #191717; /* Text color */
+    padding: 20px; /* Padding around the content */
+}
+.instagram-icon {
+    font-size: 48px; /* Adjust the size of the icon */
+    color: red; /* Change the color of the icon */
+    margin-right: 10px; /* Add some spacing to the right of the icon */
+}
