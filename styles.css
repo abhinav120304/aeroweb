@@ -2,6 +2,96 @@ body {
     color: aliceblue;
     background-color: black;
 }
+/* CSS for hamburger menu */
+.toggle-button {
+    display: none; /* Hide button by default on larger screens */
+}
+
+@media only screen and (max-width: 600px) {
+    .toggle-button {
+        display: block; /* Display button on smaller screens */
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px;
+        color: #fff;
+    }
+
+    #navList {
+        display: none; /* Hide navigation links by default on smaller screens */
+        flex-direction: column; /* Display links vertically */
+        background-color: #333; /* Background color for mobile navigation */
+        padding: 20px;
+        position: absolute;
+        top: 60px; /* Adjust this value according to your header height */
+        left: 0;
+        right: 0;
+    }
+
+    .header-links li {
+        margin-bottom: 10px;
+    }
+
+    .header-links a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    #navList.active {
+        display: flex; /* Display navigation links when menu is active */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.toggle-button {
+    display: none; /* Hide button by default on larger screens */
+}
+
+@media only screen and (max-width: 600px) {
+    .toggle-button {
+        display: block; /* Display button on smaller screens */
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px;
+        color: #fff;
+    }
+
+    .header-links {
+        display: none; /* Hide navigation links by default on smaller screens */
+        flex-direction: column; /* Display links vertically */
+        background-color: #333; /* Background color for mobile navigation */
+        padding: 20px;
+        position: absolute;
+        top: 60px; /* Adjust this value according to your header height */
+        left: 0;
+        right: 0;
+    }
+
+    .header-links li {
+        margin-bottom: 10px;
+    }
+
+    .header-links a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .header-links.active {
+        display: flex; /* Display navigation links when menu is active */
+    }
+}
+
 header {
     background-color: black; /* Header background color */
     color: #fff; /* Text color */
@@ -257,6 +347,67 @@ header {
         max-width: 80%; /* Reduce the maximum width of the image for smaller screens */
     }
 }
+/* CSS for gallery section */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.gallery-slide, .video-slide {
+    flex-basis: 48%; /* Adjust as needed for spacing */
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .gallery-slide, .video-slide {
+        flex-basis: 100%; /* Display each slide as full width on smaller screens */
+    }
+}
+/* CSS for gallery section */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.video-slide {
+    flex-basis: 100%; /* Display each video slide as full width on all screens */
+    margin-bottom: 20px;
+}
+
+.video-slide video {
+    width: 100%; /* Ensure the video fills its container */
+    height: auto; /* Maintain aspect ratio */
+}
+/* CSS for gallery section */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.video-slide {
+    flex-basis: 100%; /* Display each video slide as full width by default */
+    margin-bottom: 20px;
+}
+
+.video-slide video {
+    width: 100%; /* Ensure the video fills its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media only screen and (min-width: 601px) {
+    /* CSS for desktop screens */
+    .video-slide {
+        flex-basis: calc(33.33% - 20px); /* Display three videos per row with spacing */
+    }
+}
+
+
 footer {
     background-color: #eaeae2; /* Background color for the footer */
     color: #191717; /* Text color */
@@ -267,3 +418,7 @@ footer {
     color: red; /* Change the color of the icon */
     margin-right: 10px; /* Add some spacing to the right of the icon */
 }
+@media only screen and (max-width: 600px) {
+    /* CSS styles for smaller screens */
+}
+
