@@ -1,3 +1,13 @@
+
+// JavaScript for hamburger menu
+const toggleButton = document.querySelector('.toggle-button');
+const navList = document.getElementById('navList');
+
+toggleButton.addEventListener('click', () => {
+    navList.classList.toggle('active');
+});
+
+
 // Smooth scrolling to anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
